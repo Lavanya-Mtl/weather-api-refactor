@@ -36,7 +36,7 @@ function CityModal(props) {
 
     return (
         <>
-            <Modal isOpen={props.addView} onRequestClose={props.closeModal} contentLabel="Example Modal" shouldCloseOnOverlayClick={false}>
+            <Modal isOpen={props.addView} onRequestClose={props.closeModal} contentLabel="Example Modal">
             <div className='SearchDiv'>
                 <div className='input-group'>
                     <label htmlFor='searchInput'>Search City</label>

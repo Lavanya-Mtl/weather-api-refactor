@@ -12,7 +12,7 @@ function CityTab() {
     function closeModal() {
         setModalOpen(false);
     }
-    const {favoriteCities,setFavoriteCities} = useContext(FavoriteCityContext);
+    const citycontext = useContext(FavoriteCityContext);
     const [selected, setSelected] = useState('');
     function selectCity(city) {
         cityData = weatherData[weatherData.findIndex(item=>item.name===city)];
@@ -28,10 +28,10 @@ function CityTab() {
             </div>
             <hr />
             {
-                favoriteCities.length===0?
+                citycontext.favoriteCities.length===0?
                     <p className="message">You have not selected any city yet</p>
                 :
-                    favoriteCities.map((city)=>{
+                citycontext.favoriteCities.map((city)=>{
                         return (
                             <div className="added-city" key={city} onClick={()=>{selectCity(city)}}>
                                 <div>{city}</div>
