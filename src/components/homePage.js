@@ -4,13 +4,13 @@ import FavouriteCities from "./favouriteCities";
 import FavoriteCityContext from "../context";
 import { useContext } from "react";
 function HomePage() {
-    const {favoriteCities,setFavoriteCities} = useContext(FavoriteCityContext);
+    const citycontext = useContext(FavoriteCityContext);
     return (
         <>
             <Sidebar activeTab='home'/>
             <div className='home-content'>
                 <Header />
-                <FavouriteCities cities={favoriteCities}/>
+                <FavouriteCities cities={citycontext.favoriteCities}/>
             </div>
         </>
     );
